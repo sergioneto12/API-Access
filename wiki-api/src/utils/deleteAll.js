@@ -4,9 +4,11 @@ import styled from 'styled-components';
 
 export default class TitleDelete extends React.Component {
 
+    //função de remoção, que previamente foi instruida no backend;
     handleSubmit = event => {
         event.preventDefault();
 
+        // Aqui, o axios repetirá o que foi criado no backend;
         axios.delete('http://localhost:5000/articles/:title', {
             })
             .then(function (response) {
@@ -32,6 +34,7 @@ export default class TitleDelete extends React.Component {
     }
 }
 
+//Estilização
 const Formulario = styled.form`
     text-align: center;
     color: white;

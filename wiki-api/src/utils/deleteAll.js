@@ -9,7 +9,7 @@ export default class TitleDelete extends React.Component {
         event.preventDefault();
 
         // Aqui, o axios repetirá o que foi criado no backend;
-        axios.delete('http://localhost:5000/articles/:title', {
+        axios.delete('http://localhost:5000/articles', {
             })
             .then(function (response) {
             console.log(response);
@@ -29,6 +29,7 @@ export default class TitleDelete extends React.Component {
             <Formulario onSubmit={this.handleSubmit}>
                 <h1>Remover Tudo!</h1>
                 <button type='submit' onClick={this.Reload}>Deletar</button>
+
             </Formulario>
         );
     }
